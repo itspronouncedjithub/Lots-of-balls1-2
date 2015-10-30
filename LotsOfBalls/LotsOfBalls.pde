@@ -1,5 +1,5 @@
 //declare variables
-int count = 100;
+int count = 10;
 
 float[] x = new float[count];
 float[] y = new float[count];
@@ -10,8 +10,7 @@ float[] diam = new float[count];
 void setup() {
   //set size of canvas
   size(800, 600);
-  int i = 0;
-  while(i<count) {
+  for(int i = 0; i<count;) {
     x[i] = random(width); 
     y[i] = random(height);
     velX[i] = random(-5,5);
@@ -25,10 +24,7 @@ void draw() {
   //draw background to cover previous frame
   background(0);
   
-  int i = 0;
-  
-  //draw ball
-  while(i<count) {
+  for(int i = 0; i<count;) {
     ellipse(x[i], y[i], diam[i], diam[i]);
   
   //add velocity to position
